@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <link rel="shortcut icon" href="images/Logo.png" type="image/x-icon">
+
+    <!-- tailwind and daisy ui link -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .active {
+            background-color: #ef4444;
+            color: white;
+        }
+
+        .active:hover {
+            background-color: #ef4444;
+        }
+    </style>
+
+</head>
+
+<body id="body">
+    <header class="max-w-screen-xl mx-auto sticky top-0 ">
+        <nav class="">
+            <div class="navbar p-5 bg-base-100 my-2 lg:my-4 ">
+                <div class="navbar-start flex justify-between">
+                    <div>
+
+                        <a href="#body" class="btn btn-ghost normal-case text-xl">
+                            <img src="images/Logo.png" alt="" class="">
+                        </a>
+
+                    </div>
+                </div>
+                <div class="navbar-center ml-3   lg:flex">
+                    <a onclick="shotByView()" class="btn">Sort by view</a>
+
+                </div>
+                <div class="navbar-end">
+                    <a href="blog.html" target="_blank" class="btn hover:text-black bg-red-500 text-white">blog</a>
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <main class="max-w-screen-xl mx-auto p-5 ">
+
+
+        <!-- catagori -->
+        <hr>
+        <section class="p-5">
+            <div id="category" class=" w-auto md:w-1/2 mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 bg-white   ">
+
+            </div>
+        </section>
+
+
+        <!-- card-contianer -->
+        <div id="card-contianer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+
+        </div>
+
+    </main>
+
+
+    <script src="js/time-calculation.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html >
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+        *{
+            text-align: justify  ;
+        }
+        main h1{
+            font-size: 40px;
+            margin: 50px 0 30px 0;
+            font-weight: bold;
+            text-align: left;
+        }
+        main h2{
+            font-size: 30px;
+            margin: 20px 0;
+            font-weight: 700;
+        }
+        main h3{
+            font-size: 26px;
+            margin: 20px 0;
+            font-weight: 500;
+        }
+        main p{
+            font-size: 20px;
+            margin: 15px 0;
+            /* font-weight: 600; */
+        }
+        main p span{
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 640px) {
+        main{
+            padding: 20px;
+        }
+            
+        main h1{
+            font-size: 32px;
+            text-align: left;
+        }
+        main h2{
+            font-size: 25px;
+            text-align: left;
+        }
+        main h3{
+            font-size: 26px;
+            margin: 20px 0;
+        }
+        main p{
+            font-size: 18px;
+        }
+        main p span{
+            font-weight: bold;
+        }
+
+        }
+
+
+    </style>
+</head>
+<body id="body">
+    <header class="max-w-screen-xl mx-auto sticky top-0 ">
+        <nav class="">
+            <div class="navbar  bg-base-100 my-1 lg:my-4 ">
+                <div class="navbar-start flex justify-between">
+                    <div>
+
+                        <a href="#body" class="btn btn-ghost normal-case text-xl">
+                            <img src="images/Logo.png" alt="" class="">
+                        </a>
+
+                    </div>
+                </div>
+                
+                <div class="navbar-end">
+                    <a href="index.html"  class="btn hover:text-black bg-red-500 text-white">videos</a>
+                </div>
+            </div>
+
+        </nav>
+
+    </header>
+
+    <main class="max-w-screen-xl mx-auto" >
+        <div  class="">
+            <h1 > Understanding Variable Declaration in JavaScript: var, let, and const</h1>
+            <p >JavaScript, the versatile and widely-used programming language for web development, offers various ways to declare variables. Among these, var, let, and const are key players, each with its own unique scope and behavior. In this blog post, we'll dive into the world of variable declaration in JavaScript and explore the scope and characteristics of these three declarations.</p>
+            
+            <div  id="blog-1" style="display: none;" >
+                <h2 >1. var: The Classic Variable Declaration</h2>
+
+                <h3>Function Scope:</h3class=>
+                <p >One of the defining features of var is its function scope. Variables declared with var are accessible only within the function where they are defined. This means that if you declare a variable inside a function, it won't be visible outside that function.</p>
+
+                <h3>Hoisting:</h3class=>
+                <p >Another quirk of var is hoisting. JavaScript hoists var declarations to the top of their containing function or global scope. This means that even if you declare a variable later in your code, it's as if it was declared at the top.</p>
+
+                <h3>Lack of Block Scope:</h3class=>
+                <p >Unlike let and const, var doesn't have block-level scope. If you declare a var variable within a block (e.g., an if statement or a loop), it will still be accessible outside that block.</p>
+
+                
+
+                <h2 >2. let: Block Scope and No Hoisting</h2>
+
+                <h3>Block Scope: </h3class=>
+                <p >let brings a more predictable and intuitive block-level scope to JavaScript. Variables declared with let are accessible only within the block where they are defined. This makes it easier to manage and reason about variable lifetimes in your code.</p>
+
+                <h3>No Hoisting:</h3class=>
+                <p >Unlike var, variables declared with let are not hoisted to the top of their containing block. They are only accessible after the point where they are declared.</p>
+
+
+
+                <h2 >3. const: Block Scope and Immutability</h2>
+
+                <h3>Block Scope:</h3class=>
+                <p >Similar to let, const provides block-level scope, making it suitable for defining variables with a limited scope.</p>
+
+                <h3>Immutability:</h3class=>
+                <p >What sets const apart from var and let is its immutability after initialization. Once you assign a value to a const variable, you cannot reassign it.</p>
+
+                <p >In summary, understanding the scope and behavior of var, let, and const is essential when working with JavaScript. var provides function scope and hoisting, while let and const offer block scope. Additionally, const enforces immutability after initialization, making it ideal for constants. <br>
+
+                As you embark on your journey as a student learning JavaScript, mastering these concepts will serve as a solid foundation for your programming skills. Happy coding!</p>
+
+            </div>
+            <button id="btn-1" onclick="hiddenDiv('blog-1' , 'btn-1')" class="btn bg-red-500 text-white my-5">Read blog</button>
+        </div>
+
+        <div>
+            <h1> the Use Cases of null and undefined in JavaScript</h1>
+            <p>JavaScript, a versatile and widely-used programming language, provides two special values, null and undefined, to handle missing or non-existent values. While they may seem similar at first glance, they have distinct use cases and implications in your code. In this blog post, we'll explore the roles and scenarios where null and undefined come into play.</p>
+
+            <div style="display: none; " id="blog-2">            
+
+                <h2>null: Explicitly Assigned Absence of Value</h2>
+                <p>null is a value that represents the intentional absence of any object value. In other words, it signifies that a variable or property exists but has no meaningful value or content. Here are some common use cases for null:</p>
+
+                <h3>1. Initializing Variables:</h3>
+                <p>You can assign null to variables when you want to indicate that they haven't been assigned a valid value yet. </p>
+
+                <h3>Resetting Values:</h3>
+                <p>null can be used to reset the value of a variable or property to an empty state or to indicate that it should no longer be considered valid.</p>
+
+                <h3>3. Checking for Absence:</h3>
+                <p>You can use null to explicitly check if a variable or property is missing or hasn't been set yet.</p>
+
+
+                <h2>undefined: Default Value for Uninitialized Variables</h2>
+                <p>undefined is a value that indicates that a variable or property has been declared but hasn't been assigned any value, not even null. Here are common use cases for undefined:  </p>
+
+
+                <h3>1. Variables Without Initialization:</h3>
+                <p>By default, variables declared without an initial assignment are set to undefined. This can be useful for checking if a variable has been initialized.</p>
+
+                <h3>2. Function Parameters:</h3>
+                <p>If a function parameter is not provided during a function call, it will be undefined. This allows you to check if arguments are missing.
+
+                </p>
+
+                <h3>3. Property Access:            </h3>
+                <p>Accessing an object property that doesn't exist results in undefined. This is often used for conditional checks.
+
+                </p>
+
+                <h2>Key Differences: null vs. undefined</h2>
+                <p>While both null and undefined represent the absence of a value, it's crucial to understand their differences:
+
+                null is explicitly assigned to indicate no value or the absence of a meaningful object, whereas undefined typically signifies a variable or property that hasn't been initialized.
+                
+                null is a value that you can assign to variables or properties, whereas undefined is the default value for uninitialized variables and inaccessible object properties.
+                
+                In conclusion, null and undefined serve distinct purposes in JavaScript. null is used when you want to explicitly indicate the absence of value, while undefined is automatically assigned to uninitialized variables and inaccessible object properties. Understanding these use cases will help you write more robust and error-free JavaScript code.</p>
+
+            </div>
+            <button id="btn-2" onclick="hiddenDiv('blog-2' , 'btn-2')" class="btn bg-red-500 text-white my-5">Read blog</button>
+        </div>
+
+        <div>
+
+           <h1>Understanding REST APIs: A Beginner's Guide</h1>
+
+
+            <p>As a student, you might have come across the term "REST API" while studying or working on web development projects. REST APIs play a crucial role in modern web applications, and understanding them is essential for anyone entering the field of software development. In this blog post, we will demystify REST APIs, explaining what they are, how they work, and why they are important.</p>
+
+            <div id="blog-3" style="display: none;">
+
+
+                <h2>What is a REST API?</h2>
+                <p>REST stands for Representational State Transfer. It is an architectural style for designing networked applications, and a REST API (Application Programming Interface) is a set of rules and conventions for building and interacting with web services using HTTP requests. In simpler terms, a REST API allows different software applications to communicate and exchange data over the internet.</p>
+
+                <h2>Key Concepts of REST APIs:</h2>
+
+                <p><span>Resources:</span> In REST, everything is considered a resource, such as data objects or services. Each resource is identified by a unique URL.</p>
+
+                <p><span>HTTP Methods:</span> REST APIs use standard HTTP methods like GET, POST, PUT, DELETE, and PATCH to perform actions on resources. For example, GET is used to retrieve data, while POST is used to create new resources.</p>
+
+                <p><span>Stateless:</span> REST is stateless, meaning that each request from a client to the server must contain all the information needed to understand and process the request. Servers do not store information about the client's state between requests.</p>
+
+                <p><span>Uniform Interface:</span> REST APIs have a uniform and consistent interface, making it easier for developers to work with them. This includes using standard HTTP status codes for responses.</p>
+
+                <h2>How Does a REST API Work?</h2>
+                <p>When you make a request to a REST API, you send an HTTP request to a specific URL (endpoint) on the server. The server processes the request and sends back an HTTP response, typically in JSON or XML format, containing the requested data or information about the performed action.</p>
+
+                <p>For example, if you want to retrieve a list of products from an e-commerce website, you might send a GET request to a URL like https://api.example.com/products. The server would respond with a JSON object containing product details.</p>
+
+                <h2>Why Are REST APIs Important?</h2>
+                <p>REST APIs are the backbone of modern web and mobile applications. They allow different systems to work together seamlessly, enabling features like social media logins, real-time updates, and data retrieval from various sources. As a student aspiring to become a software developer, understanding REST APIs is crucial for building robust and interconnected applications.</p>
+
+                <h2>Conclusion:</h2>
+                <p>In this blog post, we've covered the basics of REST APIs, including their definition, key concepts, and how they work. REST APIs have become an integral part of the web development landscape, and having a solid understanding of them will be invaluable in your journey as a student and future software developer.</p>
+                </div>
+
+'
+<button id="btn-3" onclick="hiddenDiv('blog-3' , 'btn-3')" class="btn bg-red-500 text-white my-5">Read blog</button>
+
+
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+    <script>
+
+        
+        // let divTarget  = document.getElementById("hide")
+        // divTarget.style.display = "block";
+        // console.log(divTarget);
+
+        
+        function hiddenDiv(id ,btnId){            
+
+            let div =document.getElementById(id)
+            div.style.display = "block"
+            btn = document.getElementById(btnId)
+            btn.style.display = "none"
+            console.log(btn)
+            
+
+
+            
+            
+
+        }
+
+        // .addEventListener("click", function(){
+
+        //     console.log("div")
+
+        //     if(div.style.display = "none"){
+        //         div.style.display = "block"
+        //     }
+        //     else{
+        //         console.log("o")
+        //         div.style.display = "none"
+                
+        //     }
+        // })
+    </script>
+</body>
+</html>
